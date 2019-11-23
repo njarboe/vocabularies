@@ -1,0 +1,147 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdo: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix pitype: <http://linked.data.gov.au/def/parseinsighttype/> .
+@prefix isoscope: <http://linked.data.gov.au/def/iso19115-1/ScopeCode/> .
+@prefix dcrt: <http://linked.data.gov.au/def/dataciterecourcetypes/> .
+
+<http://linked.data.gov.au/def/parseinsighttype> a owl:Ontology .
+
+pitype:conceptScheme a skos:ConceptScheme ;
+    dct:created "2019-11-23"^^xsd:date ;
+    dct:creator [
+        sdo:name "Nicholas J. Car" ;
+        sdo:identifier <http://orcid.org/0000-0002-8742-7730> ;
+        sdo:email <mailto:nicholas.car@surroundaustralia.com> ;
+        sdo:memberOf [
+            sdo:name "SURROUND Australia Pty Ltd" ;
+            sdo:url <https://surroundaustralia.com> ;
+        ] ;
+    ] ;
+    dct:source <http://gfzpublic.gfz-potsdam.de/pubman/item/escidoc:1397899:6/component/escidoc:1398549/re3data_schema_documentation_v3_0.pdf> ;
+    skos:definition """A SKOS version of the IPARSE Insight type Codelist.
+
+The Concepts in this ConceptScheme are taken from the Metadata Schema for the Description of Research Data Repositories: version 3, Item 15 contentType: https://doi.org/10.2312/re3.008.
+
+The source does not provide Concept definitions, only examples of file types, indicated by pseudo files extensions, indicative of the class (Concept). 
+
+Additional SKOS matching relations are supplied by the named contributor."""@en ;
+    dct:source <https://standards.iso.org/iso/19115/resources/Codelists/gml/MD_ScopeCode.xml> ;
+    skos:hasTopConcept 
+        pitype:standardofficedocuments ,
+        pitype:networkbaseddata ,
+        pitype:database ,
+        pitype:image ,
+        pitype:structuredgraphics ,
+        pitype:audiovisualdata ,
+        pitype:scientificandstatisticaldata ,
+        pitype:rawdata ,
+        pitype:plaintext ,
+        pitype:structuredtext ,
+        pitype:archiveddata ,
+        pitype:softwareapplications  ,
+        pitype:sourcecode ,
+        pitype:configurationdata ,
+        pitype:other ;
+    skos:prefLabel "ISO19115-1 MD_ScopeCode Codelist"@en .
+
+pitype:standardofficedocuments a skos:Concept ;
+    skos:broadMatch isoscope:document ;
+    skos:example "text documents, spreadsheets, presentations"@en ;
+    skos:inScheme pitype:conceptScheme ;
+    skos:prefLabel "Standard Office Documents"@en ;
+    skos:topConceptOf pitype:conceptScheme .
+
+pitype:networkbaseddata a skos:Concept ;
+    skos:example "websites, email, chat history, etc."@en ;
+    skos:inScheme pitype:conceptScheme ;
+    skos:prefLabel "Network-based Data"@en ;
+    skos:topConceptOf pitype:conceptScheme .
+
+pitype:database a skos:Concept ;
+    skos:example "DBASE, MS Access, Oracle, MySQL, etc."@en ;
+    skos:inScheme pitype:conceptScheme ;
+    skos:prefLabel "Database"@en ;
+    skos:topConceptOf pitype:conceptScheme .
+
+pitype:image a skos:Concept ;
+    skos:exactMatch dcrt:image ;
+    skos:example "JPEG, JPEG2000, GIF, TIF, PNG, SVG, etc."@en ;
+    skos:inScheme pitype:conceptScheme ;
+    skos:prefLabel "Image"@en ;
+    skos:topConceptOf pitype:conceptScheme .
+
+pitype:structuredgraphics a skos:Concept ;
+    skos:example "CAD, CAM, 3D, VRML, etc."@en ;
+    skos:inScheme pitype:conceptScheme ;
+    skos:prefLabel "Structured Graphics"@en ;
+    skos:topConceptOf pitype:conceptScheme .
+
+pitype:audiovisualdata a skos:Concept ;
+    skos:exactMatch dcrt:audiovisual ;
+    skos:example "WAVE, MP3, MP4, Flash, etc."@en ;
+    skos:inScheme pitype:conceptScheme ;
+    skos:prefLabel "Audiovisual Data"@en ;
+    skos:topConceptOf pitype:conceptScheme .
+
+pitype:scientificandstatisticaldata a skos:Concept ;
+    skos:example "SPSS, FITS, GIS, etc."@en ;
+    skos:inScheme pitype:conceptScheme ;
+    skos:prefLabel "Scientific and Statistical Data"@en ;
+    skos:topConceptOf pitype:conceptScheme .
+
+pitype:aggregarawdatate a skos:Concept ;
+    skos:example "device specific output"@en ;
+    skos:inScheme pitype:conceptScheme ;
+    skos:prefLabel "Raw Data"@en ;
+    skos:topConceptOf pitype:conceptScheme .
+
+pitype:plaintext a skos:Concept ;
+    skos:broadMatch dcrt:text ;
+    skos:example "TXT in various encodings"@en ;
+    skos:inScheme pitype:conceptScheme ;
+    skos:prefLabel "Plain Text"@en ;
+    skos:topConceptOf pitype:conceptScheme .
+
+pitype:structuredtext a skos:Concept ;
+    skos:example "XML, SGML, etc."@en ;
+    skos:inScheme pitype:conceptScheme ;
+    skos:prefLabel "Structured Text"@en ;
+    skos:topConceptOf pitype:conceptScheme .
+
+pitype:archiveddata a skos:Concept ;
+    skos:example "ZIP, RAR, JAR, etc."@en ;
+    skos:inScheme pitype:conceptScheme ;
+    skos:prefLabel "Archived Data"@en ;
+    skos:topConceptOf pitype:conceptScheme .
+
+pitype:softwareapplications a skos:Concept ;
+    skos:narrowMatch dcrt:software ;
+    skos:example "modelling tools, editors, IDE, compilers, etc."@en ;
+    skos:inScheme pitype:conceptScheme ;
+    skos:prefLabel "Software Applications"@en ;
+    skos:topConceptOf pitype:conceptScheme .
+
+pitype:sourcecode a skos:Concept ;
+    skos:broadMatch dcrt:software ;
+    skos:example "scripting, Java, C, C++, Fortran, etc."@en ;
+    skos:inScheme pitype:conceptScheme ;
+    skos:prefLabel "Source Code"@en ;
+    skos:topConceptOf pitype:conceptScheme .
+
+pitype:configurationdata a skos:Concept ;
+    skos:example "parameter settings, logs, library files"@en ;
+    skos:inScheme pitype:conceptScheme ;
+    skos:prefLabel "Configuration Data"@en ;
+    skos:topConceptOf pitype:conceptScheme .
+
+pitype:other a skos:Concept ;
+    skos:inScheme pitype:conceptScheme ;
+    skos:prefLabel "Other"@en ;
+    skos:topConceptOf pitype:conceptScheme .

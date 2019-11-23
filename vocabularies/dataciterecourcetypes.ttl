@@ -10,7 +10,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix isoscope: <http://linked.data.gov.au/def/iso19115-1/ScopeCode/> .
 
-<http://linked.data.gov.au/def/iso19115-1/ScopeCode> a owl:Ontology .
+<http://linked.data.gov.au/def/dataciterecourcetypes> a owl:Ontology .
 
 dcrt:conceptScheme a skos:ConceptScheme ;
     dct:created "2019-11-23"^^xsd:date ;
