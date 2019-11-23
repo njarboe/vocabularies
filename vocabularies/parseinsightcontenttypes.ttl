@@ -49,7 +49,7 @@ Additional SKOS matching relations are supplied by the named contributor."""@en 
         pitype:sourcecode ,
         pitype:configurationdata ,
         pitype:other ;
-    skos:prefLabel "ISO19115-1 MD_ScopeCode Codelist"@en .
+    skos:prefLabel "PARSE.Insight contentType Codelist"@en .
 
 pitype:standardofficedocuments a skos:Concept ;
     skos:broadMatch isoscope:document ;

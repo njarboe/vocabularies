@@ -45,7 +45,7 @@ DataCite does not provide any Concept definitions. Associations between these co
         dcrt:text ,
         dcrt:workflow ,
         dcrt:other ;
-    skos:prefLabel "ISO19115-1 MD_ScopeCode Codelist"@en .
+    skos:prefLabel "DataCite resourceType Codelist"@en .
 
 dcrt:audiovisual a skos:Concept ;
     skos:inScheme dcrt:conceptScheme ;
