@@ -1,0 +1,128 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcrt: <http://linked.data.gov.au/def/dataciterecourcetypes/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdo: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix isoscope: <http://linked.data.gov.au/def/iso19115-1/ScopeCode/> .
+
+<http://linked.data.gov.au/def/iso19115-1/ScopeCode> a owl:Ontology .
+
+dcrt:conceptScheme a skos:ConceptScheme ;
+    dct:created "2019-11-23"^^xsd:date ;
+    dct:creator [
+        sdo:name "Nicholas J. Car" ;
+        sdo:identifier <http://orcid.org/0000-0002-8742-7730> ;
+        sdo:email <mailto:nicholas.car@surroundaustralia.com> ;
+        sdo:memberOf [
+            sdo:name "SURROUND Australia Pty Ltd" ;
+            sdo:url <https://surroundaustralia.com> ;
+        ] ;
+    ] ;
+    skos:definition """The general type of a resource.
+    
+These terms are all taken from DataCite's resourceType code list, see https://schema.datacite.org/meta/kernel-4.1/include/datacite-resourceType-v4.1.xsd.
+
+DataCite does not provide any Concept definitions. Associations between these codes and other 'type' codes with exactly matching labels but that do have definitions and are reasonably able to be assumed to be the same are provided by the named contributor."""@en ;
+    dct:source <https://schema.datacite.org/meta/kernel-4.1/include/datacite-resourceType-v4.1.xsd> ;
+    skos:hasTopConcept 
+        dcrt:audiovisual ,
+        dcrt:collection ,
+        dcrt:dataPaper ,
+        dcrt:dataset ,
+        dcrt:event ,
+        dcrt:image ,
+        dcrt:interactiveresource ,
+        dcrt:model ,
+        dcrt:physicalobject ,
+        dcrt:service ,
+        dcrt:software ,
+        dcrt:sound ,
+        dcrt:text ,
+        dcrt:workflow ,
+        dcrt:other ;
+    skos:prefLabel "ISO19115-1 MD_ScopeCode Codelist"@en .
+
+dcrt:audiovisual a skos:Concept ;
+    skos:inScheme dcrt:conceptScheme ;
+    skos:prefLabel "Audiovisual"@en ;
+    skos:topConceptOf dcrt:conceptScheme .
+
+dcrt:collection a skos:Concept ;
+    skos:exactMatch isoscope:collection ;
+    skos:inScheme dcrt:conceptScheme ;
+    skos:prefLabel "Collection"@en ;
+    skos:topConceptOf dcrt:conceptScheme .
+
+dcrt:datapaper a skos:Concept ;
+    skos:inScheme dcrt:conceptScheme ;
+    skos:prefLabel "DataPaper"@en ;
+    skos:topConceptOf dcrt:conceptScheme .
+
+dcrt:dataset a skos:Concept ;
+    skos:exactMatch isoscope:dataset ;
+    skos:inScheme dcrt:conceptScheme ;
+    skos:prefLabel "Dataset"@en ;
+    skos:topConceptOf dcrt:conceptScheme .
+
+dcrt:event a skos:Concept ;
+    skos:inScheme dcrt:conceptScheme ;
+    skos:prefLabel "Event"@en ;
+    skos:topConceptOf dcrt:conceptScheme .
+
+dcrt:image a skos:Concept ;
+    skos:inScheme dcrt:conceptScheme ;
+    skos:prefLabel "Image"@en ;
+    skos:topConceptOf dcrt:conceptScheme .
+
+dcrt:interactiveresource a skos:Concept ;
+    skos:inScheme dcrt:conceptScheme ;
+    skos:prefLabel "InteractiveResource"@en ;
+    skos:topConceptOf dcrt:conceptScheme .
+
+dcrt:model a skos:Concept ;
+    skos:exactMatch isoscope:model ;
+    skos:inScheme dcrt:conceptScheme ;
+    skos:prefLabel "Model"@en ;
+    skos:topConceptOf dcrt:conceptScheme .
+
+dcrt:physicalobject a skos:Concept ;
+    skos:inScheme dcrt:conceptScheme ;
+    skos:prefLabel "PhysicalObject"@en ;
+    skos:topConceptOf dcrt:conceptScheme .
+
+dcrt:service a skos:Concept ;
+    skos:exactMatch isoscope:service ;
+    skos:inScheme dcrt:conceptScheme ;
+    skos:prefLabel "Service"@en ;
+    skos:topConceptOf dcrt:conceptScheme .
+
+dcrt:software a skos:Concept ;
+    skos:exactMatch isoscope:software ;
+    skos:inScheme dcrt:conceptScheme ;
+    skos:prefLabel "Software"@en ;
+    skos:topConceptOf dcrt:conceptScheme .
+
+dcrt:sound a skos:Concept ;
+    skos:inScheme dcrt:conceptScheme ;
+    skos:prefLabel "Sound"@en ;
+    skos:topConceptOf dcrt:conceptScheme .
+
+dcrt:text a skos:Concept ;
+    skos:inScheme dcrt:conceptScheme ;
+    skos:prefLabel "Text"@en ;
+    skos:topConceptOf dcrt:conceptScheme .
+
+dcrt:workflow a skos:Concept ;
+    skos:inScheme dcrt:conceptScheme ;
+    skos:prefLabel "Workflow"@en ;
+    skos:topConceptOf dcrt:conceptScheme .
+
+dcrt:other a skos:Concept ;
+    skos:inScheme dcrt:conceptScheme ;
+    skos:prefLabel "Other"@en ;
+    skos:topConceptOf dcrt:conceptScheme .

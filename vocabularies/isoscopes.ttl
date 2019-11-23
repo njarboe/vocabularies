@@ -1,0 +1,222 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdo: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix isoscope: <http://linked.data.gov.au/def/iso19115-1/ScopeCode/> .
+
+<http://linked.data.gov.au/def/iso19115-1/ScopeCode> a owl:Ontology .
+
+isoscope:conceptScheme a skos:ConceptScheme ;
+    dct:created "2019-11-23"^^xsd:date ;
+    dct:creator [
+        sdo:name "Nicholas J. Car" ;
+        sdo:identifier <http://orcid.org/0000-0002-8742-7730> ;
+        sdo:email <mailto:nicholas.car@surroundaustralia.com> ;
+        sdo:memberOf [
+            sdo:name "SURROUND Australia Pty Ltd" ;
+            sdo:url <https://surroundaustralia.com> ;
+        ] ;
+    ] ;
+    skos:definition """A SKOS version of the ISO 19115-1 MD_ScopeCode Codelist.
+
+The Concepts in this ConceptScheme are classes of datasets' (Entities') information. They are taken from the international standard ISO19115-1:2014 Geographic information - Metadata - Part 1: Fundamentals.
+
+All Concepts are taken from ISO19115-1:2014, Table B.3.28 on page 123.
+
+Additional scope notes are added by the named contributor to some Concepts in this vocabulary to give further context about them fo users unfamiliar with ISO 19115-1."""@en ;
+    dct:source <https://standards.iso.org/iso/19115/resources/Codelists/gml/MD_ScopeCode.xml> ;
+    skos:hasTopConcept 
+        isoscope:aggregate ,
+        isoscope:application ,
+        isoscope:attribute ,
+        isoscope:attributeType ,
+        isoscope:collection ,
+        isoscope:collectionHardware ,
+        isoscope:collectionSession ,
+        isoscope:coverage ,
+        isoscope:dataset ,
+        isoscope:dimensionGroup ,
+        isoscope:document ,
+        isoscope:feature ,
+        isoscope:featureType ,
+        isoscope:fieldSession ,
+        isoscope:initiative ,
+        isoscope:metadata ,
+        isoscope:model ,
+        isoscope:nonGeographicDataset ,
+        isoscope:product ,
+        isoscope:propertyType ,
+        isoscope:repository ,
+        isoscope:sample ,
+        isoscope:series ,
+        isoscope:service ,
+        isoscope:software ,
+        isoscope:tile ;
+    skos:prefLabel "ISO19115-1 MD_ScopeCode Codelist"@en .
+
+isoscope:aggregate a skos:Concept ;
+    skos:definition "Information applies to an aggregate resource"@en ;
+    skos:inScheme isoscope:conceptScheme ;
+    skos:prefLabel "Aggregate"@en ;
+    skos:topConceptOf isoscope:conceptScheme .
+
+isoscope:application a skos:Concept ;
+    skos:definition "Information resource hosted on a specific set of hardware and accessible over a network"@en ;
+    skos:inScheme isoscope:conceptScheme ;
+    skos:prefLabel "Application"@en ;
+    skos:topConceptOf isoscope:conceptScheme .
+
+isoscope:attribute a skos:Concept ;
+    skos:definition "Information applies to the attribute value"@en ;
+    skos:inScheme isoscope:conceptScheme ;
+    skos:prefLabel "Attribute"@en ;
+    skos:scopeNote "From ISO19115-1: ''Attributes are the digital parameters that describe a common aspect of a Feature (a geospatial thing)''. They may also be described as characteristics of the Feature."@en ;
+    skos:topConceptOf isoscope:conceptScheme .
+
+isoscope:attributeType a skos:Concept ;
+    skos:definition "Information applies to the characteristic of a feature"@en ;
+    skos:inScheme isoscope:conceptScheme ;
+    skos:prefLabel "Attribute Type"@en ;
+    skos:topConceptOf isoscope:conceptScheme .
+
+isoscope:collection a skos:Concept ;
+    skos:definition "Information applies to an unstructured set"@en ;
+    skos:inScheme isoscope:conceptScheme ;
+    skos:prefLabel "Collection"@en ;
+    skos:topConceptOf isoscope:conceptScheme .
+
+isoscope:collectionHardware a skos:Concept ;
+    skos:definition "Information applies to the collection hardware class"@en ;
+    skos:inScheme isoscope:conceptScheme ;
+    skos:prefLabel "Collection Hardware"@en ;
+    skos:topConceptOf isoscope:conceptScheme .
+
+isoscope:collectionSession a skos:Concept ;
+    skos:definition "Information applies to the collection session"@en ;
+    skos:inScheme isoscope:conceptScheme ;
+    skos:prefLabel "Collection Session"@en ;
+    skos:topConceptOf isoscope:conceptScheme .
+
+isoscope:coverage a skos:Concept ;
+    skos:definition "Information applies to a coverage"@en ;
+    skos:inScheme isoscope:conceptScheme ;
+    skos:prefLabel "Coverage"@en ;
+    skos:scopeNote "A coverage is the digital representation of some spatio-temporal phenomenon in a rasterised, gridded, form, as opposed to vector form. A coverage is represented by its 'domain' (the universe of extent) and a collection representing the coverage's values at each defined location within its range."@en ;
+    skos:topConceptOf isoscope:conceptScheme .
+
+isoscope:dataset a skos:Concept ;
+    skos:definition "Information applies to the dataset"@en ;
+    skos:inScheme isoscope:conceptScheme ;
+    skos:prefLabel "Dataset"@en ;
+    skos:topConceptOf isoscope:conceptScheme .
+
+isoscope:dimensionGroup a skos:Concept ;
+    skos:definition "Information applies to a dimension group"@en ;
+    skos:inScheme isoscope:conceptScheme ;
+    skos:prefLabel "Dimension Group"@en ;
+    skos:topConceptOf isoscope:conceptScheme .
+
+isoscope:document a skos:Concept ;
+    skos:definition "Information applies to a document"@en ;
+    skos:inScheme isoscope:conceptScheme ;
+    skos:prefLabel "Document"@en ;
+    skos:topConceptOf isoscope:conceptScheme .
+
+isoscope:feature a skos:Concept ;
+    skos:definition "Information applies to a feature"@en ;
+    skos:inScheme isoscope:conceptScheme ;
+    skos:prefLabel "Feature"@en ;
+    skos:scopeNote "A Feature, in relation to ISO19115-1, is a geospatial phenomena"@en ;
+    skos:topConceptOf isoscope:conceptScheme .
+
+isoscope:featureType a skos:Concept ;
+    skos:definition "Information applies to a feature type"@en ;
+    skos:inScheme isoscope:conceptScheme ;
+    skos:prefLabel "Feature Type"@en ;
+    skos:topConceptOf isoscope:conceptScheme .
+
+isoscope:fieldSession a skos:Concept ;
+    skos:definition "Information applies to a field session"@en ;
+    skos:inScheme isoscope:conceptScheme ;
+    skos:prefLabel "Field Session"@en ;
+    skos:scopeNote "Filed as in scientific fieldwork"@en ;
+    skos:topConceptOf isoscope:conceptScheme .
+
+isoscope:initiative a skos:Concept ;
+    skos:definition "Information applies to an initiative"@en ;
+    skos:inScheme isoscope:conceptScheme ;
+    skos:prefLabel "Initiative"@en ;
+    skos:topConceptOf isoscope:conceptScheme .
+
+isoscope:metadata a skos:Concept ;
+    skos:definition "Information applies to metadata"@en ;
+    skos:inScheme isoscope:conceptScheme ;
+    skos:prefLabel "Metadata"@en ;
+    skos:topConceptOf isoscope:conceptScheme .
+
+isoscope:model a skos:Concept ;
+    skos:definition "Information applies to a copy or imitation of an existing or hypothetical object"@en ;
+    skos:inScheme isoscope:conceptScheme ;
+    skos:prefLabel "Model"@en ;
+    skos:topConceptOf isoscope:conceptScheme .
+
+isoscope:nonGeographicDataset a skos:Concept ;
+    skos:definition "Information applies to non-geographic data"@en ;
+    skos:inScheme isoscope:conceptScheme ;
+    skos:prefLabel "Non-Geographic Dataset"@en ;
+    skos:topConceptOf isoscope:conceptScheme .
+
+isoscope:product a skos:Concept ;
+    skos:definition "Metadata describing an ISO 19131 data product specification"@en ;
+    skos:inScheme isoscope:conceptScheme ;
+    skos:prefLabel "Product"@en ;
+    skos:topConceptOf isoscope:conceptScheme .
+
+isoscope:propertyType a skos:Concept ;
+    skos:definition "Information applies to a property type"@en ;
+    skos:inScheme isoscope:conceptScheme ;
+    skos:prefLabel "Property Type"@en ;
+    skos:topConceptOf isoscope:conceptScheme .
+
+isoscope:repository a skos:Concept ;
+    skos:definition "Information applies to a repository"@en ;
+    skos:inScheme isoscope:conceptScheme ;
+    skos:prefLabel "Repository"@en ;
+    skos:topConceptOf isoscope:conceptScheme .
+
+isoscope:sample a skos:Concept ;
+    skos:definition "Information applies to a sample"@en ;
+    skos:inScheme isoscope:conceptScheme ;
+    skos:prefLabel "Sample"@en ;
+    skos:scopeNote "The Sample may be physical (a 'specimen') or digital or mathemetical: a very broad definition of sample"@en ;
+    skos:topConceptOf isoscope:conceptScheme .
+
+isoscope:series a skos:Concept ;
+    skos:definition "Information applies to the series"@en ;
+    skos:inScheme isoscope:conceptScheme ;
+    skos:prefLabel "Series"@en ;
+    skos:scopeNote "A regulare set of related items - more similar than a Collection. Could be a sequence of Datasets that varies by spatial or temporal extent but is otherwise similar."@en ;
+    skos:topConceptOf isoscope:conceptScheme .
+
+isoscope:service a skos:Concept ;
+    skos:definition "Information applies to a capability which a service provider entity makes available to a service user entity through a set of interfaces that define a behaviour, such as a use case"@en ;
+    skos:inScheme isoscope:conceptScheme ;
+    skos:prefLabel "Service"@en ;
+    skos:topConceptOf isoscope:conceptScheme .
+
+isoscope:software a skos:Concept ;
+    skos:definition "Information applies to a computer program or routine"@en ;
+    skos:inScheme isoscope:conceptScheme ;
+    skos:prefLabel "Software"@en ;
+    skos:topConceptOf isoscope:conceptScheme .
+
+isoscope:tile a skos:Concept ;
+    skos:definition "Information applies to a tile, a spatial subset of geographic data"@en ;
+    skos:inScheme isoscope:conceptScheme ;
+    skos:prefLabel "Tile"@en ;
+    skos:topConceptOf isoscope:conceptScheme .
