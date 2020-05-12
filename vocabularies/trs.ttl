@@ -235,7 +235,6 @@ trs:UTCTime
   skos:prefLabel "Coordinated Universal Time"@en ;
   skos:topConceptOf <http://linked.data.gov.au/def/trs> ;
 .
-
 trs:ThousandsOfYearsAgo
   a skos:Concept ;
   a time:TRS ;
@@ -246,7 +245,6 @@ trs:ThousandsOfYearsAgo
   skos:definition "Temporal position expressed numerically scaled in thousands of years increasing backwards relative to 1950. Calibration to 1950 not always significant or done, except when carbon dating methods are used."@en ;
   skos:prefLabel "Thousands of Years Ago"@en ;
 .
-
 trs:MillionsOfYearsAgo
   a skos:Concept ;
   a time:TRS ;
@@ -257,7 +255,6 @@ trs:MillionsOfYearsAgo
   skos:definition "Temporal position expressed numerically scaled in millions of years increasing backwards relative to 1950. Calibration to 1950 usually not significant or done."@en ;
   skos:prefLabel "Millions of Years Ago"@en ;
 .
-
 trs:BillionsOfYearsAgo
   a skos:Concept ;
   a time:TRS ;
@@ -267,4 +264,14 @@ trs:BillionsOfYearsAgo
   skos:inScheme <http://linked.data.gov.au/def/trs> ;
   skos:definition "Temporal position expressed numerically scaled in billions of years increasing backwards relative to 1950. Calibration to 1950 usually not significant or performed."@en ;
   skos:prefLabel "Billions of Years Ago"@en ;
+.
+trs:BeforePresentCalibrated
+  a skos:Concept ;
+  a time:TRS ;
+  dct:source <https://www.bipm.org/en/bipm-services/timescales/> ;
+  skos:altLabel "BPCal"@en ;
+  skos:broader trs:BeforePresent ;
+  skos:inScheme <http://linked.data.gov.au/def/trs> ;T
+  skos:definition "Temporal position expressed numerically scaled in years increasing backwards relative to 1950. Used primarily by scientists determining ages by carbon dating and indicatea that the variation in the ratio of carbon 14 to carbon 12 in the atmosphere through time has been taken into account in determining the age."@en ;
+  skos:prefLabel "Before Present Calibrated"@en ;
 .
